@@ -45,23 +45,23 @@ public class Solution {
 		 */
 
 		 
-    if(n >= input.length)
-    return k == 0;
-		int i = n;
-		int sum = 0;
+    			if(n >= input.length)
+    			return k == 0;
+			int i = n;
+			int sum = 0;
 
-		while(i < input.length && input[n] == input[i]){
-			sum += input[i];
-			i++;
-		}
+			while(i < input.length && input[n] == input[i]){
+				sum += input[i];
+				i++;
+			}
 
-		if(subsetSumToKIdentical(input,i,k-sum))
-		return true;
+			if(subsetSumToKIdentical(input,i,k-sum))
+			return true;
 
-		if(subsetSumToKIdentical(input,i,k))
-		return true;
+			if(subsetSumToKIdentical(input,i,k))
+			return true;
 
-		return false;
+			return false;
 	}
 } 
 
